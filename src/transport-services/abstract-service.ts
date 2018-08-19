@@ -22,6 +22,15 @@ function createServiceIcon(color: string, size: number = 20): string {
     return 'data:image/svg+xml;base64,' + btoa(svgIcon);
 }
 
+/**
+ * Type of the Marker for the Map.
+ */
+type Marker = L.Marker<any>;
+/**
+ * Type of the Polyline for the bus route.
+ */
+type Polyline = L.Polyline<any, any>;
+
 
 /**
  * Abstract Transport Service.
@@ -43,11 +52,11 @@ export default abstract class TransportService<T extends AbstractBus> {
     /**
      * List of markers for the Service, representing buses on the Map.
      */
-    protected markers: Map<string, any> = new Map<string, any>();
+    protected markers: Map<string, Marker> = new Map<string, Marker>();
     /**
      * List of Polylines for the Bus, representing a bus's path on the Map.
      */
-    protected polyLines: Map<string, any> = new Map<string, any>();
+    protected polyLines: Map<string, Polyline> = new Map<string, Polyline>();
 
 
     /**
