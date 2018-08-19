@@ -1,0 +1,23 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "module": "es2015",
+        "target": "es2017",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "sourceMap": false,
+        "outDir": "dist",
+        "rootDir": "./src",
+        "lib": [
+            "dom",
+            "es2017"
+        ]
+    },
+    "include": [
+        "src/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+}

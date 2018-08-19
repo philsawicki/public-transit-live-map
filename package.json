@@ -1,0 +1,42 @@
+{
+  "name": "public-transit-live-map",
+  "version": "1.0.0",
+  "description": "Live map of public transit buses",
+  "main": "server/index.js",
+  "homepage": "https://github.com/philsawicki/public-transit-live-map#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philsawicki/public-transit-live-map.git"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "leaflet": "^1.3.3",
+    "request": "^2.87.0",
+    "rollup": "^0.63.5",
+    "rollup-plugin-typescript": "^0.8.1",
+    "typescript": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.2.9",
+    "tslint": "^5.11.0"
+  },
+  "scripts": {
+    "compile": "rollup -c",
+    "compile:watch": "npm run compile -- --watch",
+    "lint": "tslint --project tsconfig.json",
+    "serve": "node server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "visualization",
+    "live",
+    "transit"
+  ],
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=5.6.0"
+  },
+  "author": "Philippe Sawicki (https://philippesawicki.com)",
+  "license": "ISC"
+}
